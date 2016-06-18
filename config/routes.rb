@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # remember to restart the server after the devise install
+  devise_for :users
+
   root 'welcome#index'
 
   get '/about' => 'welcome#about'
