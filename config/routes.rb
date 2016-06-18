@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  resources :apps
   # remember to restart the server after the devise install
   devise_for :users
 
