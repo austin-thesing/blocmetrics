@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'figaro'
+# For user accounts
+gem 'devise'
 # gem 'pry'
 
 group :development, :test do
