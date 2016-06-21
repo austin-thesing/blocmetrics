@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  # Apps Controller routes
+  resources :apps
+
   # remember to restart the server after the devise install
   devise_for :users
 
+  # Welcome Controler routes
+  get 'about' => 'welcome#about'
   root 'welcome#index'
-
-  get '/about' => 'welcome#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
