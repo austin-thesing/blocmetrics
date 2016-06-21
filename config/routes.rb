@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   # Welcome Controler routes
+  get 'who-is-austin' => 'welcome#developer'
   get 'about' => 'welcome#about'
   root 'welcome#index'
 
