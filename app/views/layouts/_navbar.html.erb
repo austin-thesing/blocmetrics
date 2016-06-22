@@ -45,7 +45,7 @@
               <li><%= link_to "Log in", new_user_session_path %></li>
             <% else %>
               <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-              <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
             <% end %>
             <li role="separator" class="divider"></li>
             <li><%= link_to "GitHub Repo", 'https://github.com/austin-thesing/blocmetrics' %></li>

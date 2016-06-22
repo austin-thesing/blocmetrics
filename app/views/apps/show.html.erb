@@ -1,2 +1,6 @@
-<h1>Apps#show</h1>
-<p>Find me in app/views/apps/show.html.erb</p>
+<h1 class="media media-heading"><%= @app.name %></h1>
+<p class="media media-body"><%= @app.url %></p>
+
+<div class="remove-app">
+  <%= link_to "Remove App", app_path(@app),method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
