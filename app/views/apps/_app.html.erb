@@ -1,0 +1,29 @@
+<div class="col-md-4">
+  <%#= link_to app_path(app) do  %> <%# links each app box on the index to the appropriate app show view  %>
+    <div class="app-container">
+      <div class="name">
+        <h1>Name:</h1>
+        <%= app.name %>
+      </div>
+      <div class="url">
+        <h2>URL:</h2>
+        <%= app.url %>
+      </div>
+      <div class="time">
+        <h5>Added:</h5>
+        <%= time_ago_in_words(app.created_at) %>
+      </div>
+      <div class="buttons">
+        <div class="view-app">
+          <%= link_to "View", app_path(app), class: 'btn btn-default btn-sm' %>
+        </div>
+        <div class="favorite-app">
+          <%#= link_to "Star", --path goes here--, class: 'btn btn-default btn-sm' %>
+        </div>
+        <div class="delete-app">
+          <%= link_to "Delete", app_path(app), method: :delete, data: { confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-default btn-sm' %>
+        </div>
+      </div>
+    </div>
+  <%# end %>
+</div>

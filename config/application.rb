@@ -31,5 +31,9 @@ module Blocmetrics
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # Stop generating specs for helpers and assets
+    config.generators.assets = false
+    config.generators.helper = false
   end
 end
