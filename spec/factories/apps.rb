@@ -1,7 +1,10 @@
 FactoryGirl.define do
   factory :app do
     name "MyString"
-    url "MyString"
-    user nil
+    url "http://localhost.com"
+    user
   end
 end
+
+
+#FactoryGirl.create(:app, user: @user)

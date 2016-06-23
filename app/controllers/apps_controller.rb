@@ -1,11 +1,10 @@
 class AppsController < ApplicationController
-before_action :set_app, only: [:show, :destroy]
+before_action :set_app, except: [:index, :new, :create]
   def index
     @apps = current_user.apps.all
   end
 
   def show
-    set_app # @app = App.find(params[:id])
   end
 
   def new
@@ -27,7 +26,6 @@ before_action :set_app, only: [:show, :destroy]
   end
 
   def destroy
-    set_app
     if @app.delete
       flash[:notice] = "Your application was successfully removed. You can add it to your account again at anytime."
       redirect_to apps_path
