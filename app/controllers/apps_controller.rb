@@ -1,10 +1,11 @@
 class AppsController < ApplicationController
 before_action :set_app, except: [:index, :new, :create]
   def index
-    @apps = current_user.apps.all
+    @apps = App.all
   end
 
   def show
+    @events = set_app.events.group_by(&:event_name)
   end
 
   def new
