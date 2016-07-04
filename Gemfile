@@ -21,7 +21,9 @@ gem 'bootstrap-sass'
 gem 'figaro'
 # For user accounts
 gem 'devise'
-# gem 'pry'
+# Rollbar error tracking
+gem 'rollbar'
+gem 'oj', '~> 2.12.14'
 
 group :development, :test do
   gem 'byebug'
