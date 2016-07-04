@@ -1,6 +1,7 @@
 class API::EventsController < ApplicationController
   before_action :set_access_control_headers
   skip_before_action :verify_authenticity_token
+  skip_before_action :authenticate_user!
 
   def create
     registered_app = App.find_by(url: request.env['HTTP_ORIGIN'])
@@ -24,8 +25,8 @@ class API::EventsController < ApplicationController
 
   def set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
-    headers['Access-Control-Allow-Origin'] = 'POST, GET, OPTIONS'
-    headers['Access-Control-Allow-Origin'] = 'Content-Type'
+    headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+    headers['Access-Control-Allow-Headers'] = 'Content-Type'
   end
 
   private
