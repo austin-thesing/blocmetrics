@@ -32,5 +32,13 @@
   <div class="container">
     <%= yield %>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      blocmetrics.report('Page Load');
+      $('a').click(function(){
+        blocmetrics.report('Links Clicked');
+      });
+    });
+  </script>
 </body>
 </html>
