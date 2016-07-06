@@ -27,7 +27,7 @@ before_action :set_app, except: [:index, :new, :create]
   end
 
   def destroy
-    if @app.delete
+    if @app.destroy
       flash[:notice] = "Your application was successfully removed. You can add it to your account again at anytime."
       redirect_to apps_path
     else
