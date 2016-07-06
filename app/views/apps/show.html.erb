@@ -23,6 +23,10 @@
     </tbody>
   </table>
 </div>
+<%= pie_chart @app.events.group(:event_name).count %>
+<% if Rails.env == 'production' %>
+  <%= line_chart @app.events.group_by_day(:created_at).count %>
+<% end %>
 <p>
   <%#= @app.events.event_name %>
 </p>
