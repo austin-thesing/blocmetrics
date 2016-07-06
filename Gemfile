@@ -24,6 +24,9 @@ gem 'devise'
 # Rollbar error tracking
 gem 'rollbar'
 gem 'oj', '~> 2.12.14'
+# Chartkick graphing library
+gem 'chartkick'
+gem 'groupdate'
 
 group :development, :test do
   gem 'byebug'
@@ -33,4 +36,5 @@ group :development, :test do
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'shoulda'
 end
