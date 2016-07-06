@@ -1,3 +1,3 @@
 class Event < ActiveRecord::Base
-  belongs_to :app, dependent: :destroy
+  belongs_to :app
 end
